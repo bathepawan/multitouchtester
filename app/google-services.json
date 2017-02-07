@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "10989353510",
+    "firebase_url": "https://multi-touch-tester-ecec0.firebaseio.com",
+    "project_id": "multi-touch-tester-ecec0",
+    "storage_bucket": "multi-touch-tester-ecec0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10989353510:android:245e2209f0cc5ef2",
+        "android_client_info": {
+          "package_name": "com.a0x80bits.multitouchtester"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10989353510-kki6t99lj7881m6mh27ffmbaut73l8op.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwN_gkM7AeUBFn0RAZstUkTjEf97dsckY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

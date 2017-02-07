@@ -1,5 +1,7 @@
 package com.a0x80bits.multitouchtester;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,13 +15,16 @@ import android.widget.TextView;
 import java.nio.channels.AlreadyBoundException;
 
 public class Home extends AppCompatActivity {
-
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         final TextView touchspace = (TextView) findViewById(R.id.touchspace);
         final TextView touchesinfo = (TextView) findViewById(R.id.touchesinfo);
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         touchspace.setOnTouchListener(new View.OnTouchListener(){
 
             @Override
