@@ -2,6 +2,8 @@ package com.a0x80bits.multitouchtester;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,9 +24,6 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         final TextView touchspace = (TextView) findViewById(R.id.touchspace);
         final TextView touchesinfo = (TextView) findViewById(R.id.touchesinfo);
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
         touchspace.setOnTouchListener(new View.OnTouchListener(){
 
             @Override
@@ -47,6 +46,20 @@ public class Home extends AppCompatActivity {
                 return true;
             }
         });
+
+        // Admob
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-2447577947606854~8948069326");
+        mAdView = (AdView) findViewById(R.id.adView);
+        /*
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+                .addTestDevice("CB6BE4AD7D2225D1F360AA4D436B14EA")  // An example device ID
+                .build();
+         */
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
     }
 
     @Override
